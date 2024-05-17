@@ -1,3 +1,4 @@
+```
 var popup = window.open("", "popup", "width=740,height=220");
 var html = "<style>body { font-family: Arial; background-color:black; color: white;}</style><ul>";
 
@@ -34,3 +35,4 @@ for (var i = 0; i < lis.length; i++) {
 
 html += "</ul>";
 popup.document.body.innerHTML = html;
+```
