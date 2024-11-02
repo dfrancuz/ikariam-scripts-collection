@@ -1,6 +1,14 @@
-## 1. Korak - pritisnite F12 i provjerite da li ste u [ovom](https://imgur.com/a/05FW59V) prozorcicu...
-## 2. Korak - ako jeste, kliknite na piratsku tvrdjavu da je otvorite...
-## 3. Korak - kopirajte ovaj kod ispod u otvoreni prozorcic u brauzeru...
+> [!NOTE]
+> This script assists in displaying the Pirate Highscores in Ikariam and provides shareable links for your allies. Follow the steps below to ensure you're in the correct window before running the script.
+
+**Steps:**
+
+1. Press F12 on your keyboard to open the Developer Tools and confirm you're in [this window](https://imgur.com/a/05FW59V).
+2. Click on the Pirate Fortress to open it.
+3. Copy and paste the script below into the console in your browser's Developer Tools.
+
+The script will open a small popup window showing the Pirate Highscores with clickable links that you can share easily with allies.
+
 ```
 var popup = window.open("", "popup", "width=740,height=220");
 var html = "<style>body { font-family: Arial; background-color:black; color: white;}</style><ul>";
