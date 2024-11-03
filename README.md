@@ -14,37 +14,45 @@
 The script will open a small popup window showing the Pirate Highscores with clickable links that you can share easily with allies.
 
 ```
-var popup = window.open("", "popup", "width=740,height=220");
-var html = "<style>body { font-family: Arial; background-color:black; color: white;}</style><ul>";
+var popup = window.open("", "popup", "width=740,height=240");
+var html = "<ul>";
 
 var pirateHighscore = document.getElementById("pirateHighscore");
 var lis = pirateHighscore.getElementsByTagName("li");
 
 for (var i = 0; i < lis.length; i++) {
-  var li = lis[i];
-  var place = li.querySelector(".place").textContent.trim();
-  var pirateBooty = li.querySelector(".pirateBooty").textContent.trim();
-  var linkElement = li.querySelector(".userName");
-  var name = linkElement.textContent.trim();
-  var link = null;
-  var onclickAttr = linkElement.getAttribute("onclick");
-  
-  if (onclickAttr) {
-    var cityIdMatch = onclickAttr.match(/cityId=(\d+)/);
+    var li = lis[i];
+    var place = li.querySelector(".place").textContent.trim();
+    var pirateBooty = li.querySelector(".pirateBooty").textContent.trim();
+    var linkElement = li.querySelector(".userName");
+    var name = linkElement.textContent.trim();
+    var link = null;
+    var onclickAttr = linkElement.getAttribute("onclick");
     
-    if (cityIdMatch) {
-      var cityId = cityIdMatch[1];
-      link = "https://s401-en.ikariam.gameforge.com/?view=island&cityId=" + cityId;
-    }
-  }
+    if (onclickAttr) {
+        var cityIdMatch = onclickAttr.match(/cityId=(\d+)/);
 
-  if (link) {
-    html += "<li>" + place + pirateBooty + " &nbsp " + link + "&nbsp (" + name + ") " + "</li>";
-  } else {
-    html += "<li>" + place + pirateBooty + " &nbsp (" + name + ") " + "</li>";
-  }
+        if (cityIdMatch) {
+            var cityId = cityIdMatch[1];
+            link = "https://s401-en.ikariam.gameforge.com/?view=island&cityId=" + cityId;
+        }
+    }
+
+    if (link) {
+        html += `<li>${place} ${pirateBooty} &nbsp ${link} (${name})</li>`;
+    } else {
+        html += `<li>${place} ${pirateBooty} &nbsp (${name})</li>`;
+    }
 }
 
-html += "</ul>";
+html += `</ul><button onclick="
+    var listItems = document.querySelectorAll('li');
+    var content = '';
+    listItems.forEach(function(item) {
+        content += item.textContent + '\\n';
+    });
+    navigator.clipboard.writeText(content);
+">Copy</button>`;
+
 popup.document.body.innerHTML = html;
 ```
