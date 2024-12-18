@@ -17,4 +17,5 @@ This script is designed as a **helper tool** to improve coordination and enhance
 
 
 You should see a popup containing information:
-[IMAGE HERE]
+
+![script output window](https://raw.githubusercontent.com/dfrancuz/ikariam-scripts-collection/main/piracy-player-stats/script-output.png)
