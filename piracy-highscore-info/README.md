@@ -14,3 +14,7 @@ This script helps you display Pirate Highscores. Once you run it, a small popup 
 2. Click on the Pirate Fortress to open it.
    
 3. Copy and paste the script from `index.js` into your browser's Developer Tools console.
+
+You should see a popup containing information:
+
+![script output window](https://raw.githubusercontent.com/dfrancuz/ikariam-scripts-collection/main/piracy-highscore-info/script-output.png)
