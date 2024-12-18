@@ -5,8 +5,7 @@
 </div>
 
 ### 🏴‍☠️ $${\color{#F96167}Script \space Description} $$
-This script helps you display Pirate Highscores. Once you run it, a small popup window will open showing the Pirate Highscores with clickable links that you can share easily with allies.
-
+This script is designed as a **helper tool** to improve coordination and enhance gameplay for players. It provides a quick and efficient way to share detailed pirate high scores among allies. Once executed, it opens a popup window displaying essential information that can be shared in just a couple of clicks.
 
 ### 🏴‍☠️ $${\color{#F96167}Steps \space to \space Run \space the \space Script}$$
 1. Press **F12** on your keyboard to open the Developer Tools and confirm you're in [this window](https://imgur.com/a/05FW59V).
